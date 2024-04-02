@@ -14,8 +14,7 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -26,7 +25,7 @@ SECRET_KEY = 'django-insecure-m4n$i41w(oz*s*8_-rmyh0(0g7_9$4&fn4(&i9d54s*xqnv=81
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['m-project-env.eba-6tm46ikp.eu-west-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['m-project-env.eba-6tm46ikp.eu-west-1.elasticbeanstalk.com','be08a496a61a40ffaa7d42816e7a7d98.vfs.cloud9.eu-west-1.amazonaws.com']
 
 
 # Application definition
@@ -78,7 +77,8 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
     }
 }
 
@@ -118,8 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # <-- Set STATIC_ROOT here
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
