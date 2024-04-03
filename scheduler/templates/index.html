@@ -139,7 +139,7 @@
            <div class="col-md-4 mb-3">
                <div class="card border-0 shadow-lg overflow-hidden">
                    <!-- Assuming you have an image field in your EmployeeScheduler model -->
-                   <img class="card-img-top" src="{{ employee.image.url }}" alt="Employee Image">
+                <img src="{% static 'admin/img/' %}{{ employee.image.url }}" alt="Employee Image">
                    <div class="card-body">
                        <h5 class="card-title">{{ employee.name }}</h5>
                        <p class="card-text">Position: {{ employee.position }}</p>
