@@ -139,11 +139,12 @@
            <div class="col-md-4 mb-3">
                <div class="card border-0 shadow-lg overflow-hidden">
                    <!-- Assuming you have an image field in your EmployeeScheduler model -->
-                <img src="{% static 'admin/img/' %}{{ employee.image.url }}" alt="Employee Image">
+              <img src="{% static 'scheduler/assets/img/team-05.jpg' %}" alt="Employee Image">
                    <div class="card-body">
                        <h5 class="card-title">{{ employee.name }}</h5>
                        <p class="card-text">Position: {{ employee.position }}</p>
                        <p class="card-text">Department: {{ employee.department }}</p>
+                       <p class="card-text">Shift Date: 05/04/2024</p>
                        <!-- Add more fields as needed -->
                    </div>
                </div>
