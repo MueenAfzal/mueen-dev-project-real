@@ -25,9 +25,3 @@ phases:
       # Check the HTTP response status code directly
       - if curl -s -o /dev/null -w "%{http_code}" https://sonarcloud.io/api/qualitygates/project_status?projectKey=azharakhter555_dev-ops-project-ci-cd != "200"; then exit 1; fi
 
-
-
-
-
-
-
