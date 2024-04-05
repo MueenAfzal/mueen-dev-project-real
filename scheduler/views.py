@@ -48,7 +48,7 @@ def index(request):
 
 def about(request):
     # Your logic for the about page goes here
-    return render(request, 'about.html')
+    return render(request, 'index.html')
 
 def contact(request):
     # Your logic for the contact page goes here
